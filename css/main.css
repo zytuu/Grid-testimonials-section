@@ -1,0 +1,140 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Variables */
+:root {
+  --ff-body: "Barlow Semi Condensed", sans-serif;
+
+  --clr-background: hsl(210, 46%, 95%);
+  --clr-violet: hsl(263, 55%, 52%);
+  --clr-gray: hsl(217, 19%, 35%);
+  --clr-navy: hsl(219, 29%, 14%);
+  --clr-white: #fff;
+}
+
+/* Typography */
+body {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Mini Utils */
+
+/* White colored styles */
+.clr--white {
+  background-color: var(--clr-white);
+}
+
+.graduate {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+/* Non white colors */
+.clr--gray {
+  background-color: var(--clr-gray);
+  color: var(--clr-white);
+}
+
+.clr--navyblue {
+  background-color: var(--clr-navy);
+  color: var(--clr-white);
+}
+
+.clr--purple {
+  background-color: var(--clr-violet);
+  color: var(--clr-white);
+}
+
+/* Text utils */
+.text--dark {
+  color: rgba(32, 31, 31, 0.5);
+}
+
+.text--white {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile styles */
+html {
+  background-color: var(--clr-background);
+}
+
+body {
+  margin: 5em 2em 5em;
+}
+
+.testimonial-showcase {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2em;
+}
+
+.testimonial {
+  padding: 2.5em;
+  border-radius: 10px;
+}
+
+.testimonial:first-child {
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-size: 10em;
+  background-position: right top;
+  background-position-x: 92%;
+}
+
+.testimonial__author {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.author__avatar img {
+  border-radius: 60px;
+  max-height: 3em;
+}
+
+.testimonial h1 {
+  padding: 0.8em 0 0.8em 0;
+  letter-spacing: 0.2px;
+}
+
+.testimonial__content p {
+  line-height: 1.45em;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1440px) {
+  body {
+    margin: 1.5em 10em 1.5em 10em;
+  }
+
+  .testimonial-showcase {
+    grid-auto-flow: none;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+
+  .testimonial:last-child {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
