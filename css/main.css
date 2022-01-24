@@ -124,6 +124,7 @@ body {
     font-family: var(--ff-body);
     font-size: 0.88rem;
     margin-inline: 10em;
+    margin-top: 5em;
   }
 
   p {
